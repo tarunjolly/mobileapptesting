@@ -1,10 +1,13 @@
 const sequelize=require('sequelize');
 
-const db = new sequelize('testing', 'root', '1234', {
-    host: 'localhost',
-    dialect:'mysql'
-  });
-
+// const db = new sequelize('testing', 'root', '1234', {
+//     host: 'localhost',
+//     dialect:'mysql'
+//   });
+const db= new Sequelize({
+    dialect : 'sqlite',
+    storage: 'users_test.db'
+})
 
 const users=db.define('users',{
     id:{
