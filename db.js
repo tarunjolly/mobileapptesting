@@ -32,7 +32,7 @@ const users=db.define('users',{
 
 
 db.sync().then(()=>{
-    console.log('shop.db created');
+    console.log('Database sucessfully  created');
 })
 
 module.exports={

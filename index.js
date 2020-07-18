@@ -45,7 +45,7 @@ console.log(req.body);
         .catch((err)=>{
             // console.log(err)
             // res.redirect('/signup')
-            res.send(false)
+            res.status(500).send(false)
         })
 })
 
@@ -57,13 +57,13 @@ console.log(req.body);
 
 app.post('/login',passport.authenticate('local',{failureRedirect:'/failure'}),function(req,res){
     if(req.user){
-    res.send(true)}
+    res.status(200).send(true)}
     else{
         res.send(false)
     }
 })
 app.get('/failure',(req,res)=>{
-    res.send(false);
+    res.status(401).send(false);
 })
 
 
