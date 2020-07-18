@@ -55,16 +55,30 @@ console.log(req.body);
 //     res.render('signup')
 // })
 
-app.post('/login',passport.authenticate('local',{failureRedirect:'/failure'}),function(req,res){
-    if(req.user){
-    res.status(200).send(true)}
-    else{
-        res.send(false)
-    }
-})
-app.get('/failure',(req,res)=>{
-    res.status(401).send(false);
-})
+// app.post('/login',passport.authenticate('local',{failureRedirect:'/failure'}),function(req,res){
+//     if(req.user){
+//     res.status(200).send(true)}
+//     else{
+//         res.send(false)
+//     }
+// })
+
+// app.get('/failure',(req,res)=>{
+//     res.status(401).send(false);
+// })
+
+app.post('/login', function(req, res, next) {
+    passport.authenticate('local', function(err, user, info) {
+      if (err) { return res.status(501).send(false) }
+      if (!user) { return res.status(501).send(false) }
+      req.logIn(user, function(err) {
+        if (err) { return next(err); }
+        return res.status(200).send(true)
+      });
+    })(req, res, next);
+  });
+
+
 
 
 app.get('/',(req,res)=>{
