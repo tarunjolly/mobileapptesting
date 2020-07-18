@@ -67,7 +67,10 @@ app.get('/failure',(req,res)=>{
 })
 
 
-
+app.get('/',(req,res)=>{
+    console.log(' koi toh aaya ')
+    res.send('Helloooooooooooo')
+})
 
 app.listen(port,()=>{
     console.log(`Server running at http://${hostname}:${port}/`);
