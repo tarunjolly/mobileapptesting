@@ -19,7 +19,7 @@ app.use(session({
 app.use(passport.initialize())
 app.use(passport.session())
 
-const hostname = process.env.HOSTNAME;
+const hostname = process.env.HOST;
 const port = process.env.PORT;
 
 // app.use(express.static('/public'))

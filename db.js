@@ -4,7 +4,7 @@ const sequelize=require('sequelize');
 //     host: 'localhost',
 //     dialect:'mysql'
 //   });
-const db= new Sequelize({
+const db= new sequelize({
     dialect : 'sqlite',
     storage: 'users_test.db'
 })
