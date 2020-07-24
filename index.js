@@ -86,10 +86,10 @@ app.get('/',(req,res)=>{
     res.send('Helloooooooooooo')
 })
 
-// app.listen(port,()=>{
-//     console.log(`Server running at http://${hostname}:${port}/`);
-// })
-
-app.listen(4000, () => {
-    console.log("http://localhost:4000");
+app.listen(port,()=>{
+    console.log(`Server running at http://${hostname}:${port}/`);
 })
+
+// app.listen(4000, () => {
+//     console.log("http://localhost:4000");
+// })
