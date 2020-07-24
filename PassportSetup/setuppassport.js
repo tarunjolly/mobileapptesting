@@ -1,7 +1,7 @@
 const passport=require('passport')
 const LocalStrategy=require('passport-local')
 
-const {users}=require('./db')
+const {users}=require('../Database/db')
 
   passport.use(
     new LocalStrategy({
