@@ -7,25 +7,58 @@ const sequelize=require('sequelize');
 const db= new sequelize({
     dialect : 'sqlite',
     storage: 'users_test.db'
-})
+})  
 
 const users=db.define('users',{
     id:{
         type:sequelize.INTEGER,
         autoIncrement:true,
         primaryKey:true,
+        
+    },
+    name:{
+        type:sequelize.STRING,
+        allowNull:false,
     },
     email:{
         type:sequelize.STRING,
         allowNull:false,
+        validate:{
+            isEmail:true
+        }
     },
-    password:{
+    phoneNumber:{
         type:sequelize.STRING,
+        unique:true,
+        validate:{
+            isNumeric:true
+        }
     },
-    phone:{
+    address:{
         type:sequelize.STRING,
-        
+        allowNull:false,
     },
+    flatNumber:{
+        type:sequelize.STRING,
+        allowNull:false,
+    },
+    pinCode:{
+        type:sequelize.STRING,
+        allowNull:false,
+        validate:{
+            isNumeric:true
+        }
+    },
+    members:{
+        type:sequelize.STRING,
+        allowNull:false,
+    },
+    subscribed1:{
+        type:sequelize.INTEGER,
+    },
+    subscribed2:{
+        type:sequelize.INTEGER,
+    }
 
 })
 
