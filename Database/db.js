@@ -53,6 +53,9 @@ const users=db.define('users',{
         type:sequelize.STRING,
         allowNull:false,
     },
+    role:{
+        type:sequelize.STRING,
+    },
     subscribed1:{
         type:sequelize.INTEGER,
     },

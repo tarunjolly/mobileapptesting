@@ -42,7 +42,8 @@ console.log(req.body);
             address:req.body.address,
             flatNumber:req.body.flatNumber,
             members:req.body.members,
-            pinCode:req.body.pinCode
+            pinCode:req.body.pinCode,
+            role:"user",
         })
         .then((user)=>{
         //    Boolean resp=true
