@@ -25,7 +25,16 @@ const port = process.env.PORT;
 // app.use(express.static('/public'))
 app.use('/',express.static(__dirname))
 
-
+app.post('/authenticate',(req,res)=>{
+    console.log(req.body);
+    users.findOne({where:{phone:req.body.phonenumber}}).then(user=>{
+        if(user!=null){
+            res.send(user).status(200);
+        }else{
+            res.sendStatus(404);
+        }
+    })
+})
 
 //signup
 app.post('/signup',(req,res)=>{
@@ -86,10 +95,10 @@ app.get('/',(req,res)=>{
     res.send('Helloooooooooooo')
 })
 
-app.listen(port,()=>{
-    console.log(`Server running at http://${hostname}:${port}/`);
-})
-
-// app.listen(4000, () => {
-//     console.log("http://localhost:4000");
+// app.listen(port,()=>{
+//     console.log(`Server running at http://${hostname}:${port}/`);
 // })
+
+app.listen(4000, () => {
+    console.log("http://localhost:4000");
+})
