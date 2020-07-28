@@ -9,8 +9,9 @@ const db= new sequelize({
     storage: 'users_test.db'
 })  
 
+//user table 
 const users=db.define('users',{
-    id:{
+    userId:{
         type:sequelize.INTEGER,
         autoIncrement:true,
         primaryKey:true,
@@ -65,12 +66,160 @@ const users=db.define('users',{
 
 })
 
+//vendor table
 
+const vendors=db.define('vendors',{
+    vendorId:{
+        type:sequelize.INTEGER,
+        autoIncrement:true,
+        primaryKey:true,
+        
+    },
+    name:{
+        type:sequelize.STRING,
+        allowNull:false,
+    },
+    phoneNumber:{
+        type:sequelize.STRING,
+        unique:true,
+        validate:{
+            isNumeric:true
+        }
+    },
+    localityOfStall:{
+        type:sequelize.STRING,
+        allowNull:false,
+    },
+    aadharCardNumber:{
+        type:sequelize.STRING,
+        allowNull:false,
+    },
+    gender:{
+        type:sequelize.STRING,
+        allowNull:false,
+    },
+    image:{
+        type:sequelize.STRING,
+        
+    },
+    aadharFrontImage:{
+        type:sequelize.STRING,
+    },
+    aadharBackImage:{
+        type:sequelize.INTEGER,
+    },
+    status:{
+        type:sequelize.STRING,
+    }
+
+})
+
+//products table
+
+const products=db.define('products',{
+    productId:{
+        type:sequelize.INTEGER,
+        autoIncrement:true,
+        primaryKey:true,
+        
+    },
+    name:{
+        type:sequelize.STRING,
+        allowNull:false,
+    },
+    unit:{
+        type:sequelize.STRING,
+        
+    },
+    
+    image:{
+        type:sequelize.STRING,
+        
+    },
+    description:{
+        type:sequelize.STRING,
+    },
+
+})
+
+//user's cart table
+const userCart=db.define('userCart',{
+    userCartId:{
+        type:sequelize.INTEGER,
+        autoIncrement:true,
+        primaryKey:true,
+        
+    },
+    quantity:{
+        type:sequelize.STRING,
+        allowNull:false,
+    },
+})
+
+products.hasMany(userCart)
+userCart.belongsTo(products)
+users.hasMany(userCart)
+userCart.belongsTo(users)
+vendors.hasMany(userCart)
+userCart.belongsTo(vendors)
+
+//vendor cart table
+const vendorCart=db.define('vendorCart',{
+    vendorCartId:{
+        type:sequelize.INTEGER,
+        autoIncrement:true,
+        primaryKey:true,
+        
+    },
+    quantity:{
+        type:sequelize.STRING,
+        allowNull:false,
+    },
+    price:{
+        type:sequelize.INTEGER
+    }
+
+})
+
+vendors.hasMany(vendorCart)
+vendorCart.belongsTo(vendors)
+products.hasMany(vendorCart)
+vendorCart.belongsTo(products)
+
+
+//order table
+
+const orders=db.define('orders',{
+    orderId:{
+        type:sequelize.INTEGER,
+        autoIncrement:true,
+        primaryKey:true,
+        
+    },
+    customOrderId:{
+        type:sequelize.STRING,
+        
+    },
+    status:{
+        type:sequelize.STRING
+    },
+    modeOfPayment:{
+        type:sequelize.STRING
+    }
+
+})
+
+products.hasMany(orders)
+orders.belongsTo(products)
+users.hasMany(orders)
+orders.belongsTo(users)
+vendors.hasMany(orders)
+orders.belongsTo(vendors)
 
 db.sync().then(()=>{
     console.log('Database sucessfully  created');
 })
 
 module.exports={
-    db,users
+    db,users,products,vendors,userCart,vendorCart,orders
 }
