@@ -67,6 +67,8 @@ route.get('/deletecartproduct',(req,res)=>{
     vendorCart.destroy({where:{vendorVendorId:req.body.vendorId,productProductId:req.body.productId}}).then(()=>{
     
         res.sendStatus(200);
+    }).catch(err=>{
+        res.status(500).send(err.message)
     })
 })
 
