@@ -62,12 +62,31 @@ const {db,users,products,vendors,userCart,vendorCart,orders}=require('./db') ;
 // })
 
 
-vendorCart.findAll({where:{vendorVendorId:1},include:[products,vendors]}).then(item=>{
-    // item.forEach(element => {
-    //     console.log(element.toJSON());
-    // });
-    console.log(item.length);
-});
+// vendorCart.findAll({where:{vendorVendorId:1},include:[products,vendors]}).then(item=>{
+//     // item.forEach(element => {
+//     //     console.log(element.toJSON());
+//     // });
+//     //console.log(item.length);
+// });
+
+// vendorCart.findOne({where:{vendorCartId:1}}).then(item=>{
+//     const vendorid=item.vendorVendorId
+//     const productid=item.productProductId
+//     userCart.create({
+//         quantity:200,
+//         vendorVendorId:vendorid,
+//         productProductId:productid,
+//         userUserId:1
+//     }).then(a=>{
+//         console.log(a)
+//     })
+// })
+
+
+
+
+// userCart.create={
+// }
 
 
 
