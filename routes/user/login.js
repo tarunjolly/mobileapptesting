@@ -1,7 +1,7 @@
 const express = require('express');
 const route = express.Router();
-const { db, users} = require('../Database/db');
-const {passport}=require('../PassportSetup/setuppassport');
+const { db, users} = require('../../Database/db');
+const {passport}=require('../../PassportSetup/setuppassport');
 const sequelize=require('sequelize');
 
 
@@ -12,7 +12,7 @@ route.post('/checkUser',(req,res)=>{
         if(user!=null){
             res.sendStatus(200);
         }else{
-            res.sendStatus(404);
+            res.sendStatus(404).send(err.message);
         }
     })
 })
@@ -21,6 +21,7 @@ route.post('/checkUser',(req,res)=>{
 route.post('/verify',(req,res)=>{
     console.log(req.body);
     users.findOne({where:{phoneNumber:req.body.phoneNumber}}).then(user=>{
+        console.log(user);
         if(user!=null){
             res.status(200).send(user);
         }else{

@@ -4,7 +4,8 @@ const {db,users } = require('./Database/db');
 const session=require('express-session')
 const bodyParser=require('body-parser')
 const passport=require('./PassportSetup/setuppassport');
-const loginroute=require('./routes/login');
+const vendorroute=require('./routes/vendor/vendorroute');
+const userroute=require('./routes/user/userroute')
 app.use(bodyParser.json());
 app.use(express.json())
 app.use(express.urlencoded(({ extended: true })))
@@ -25,8 +26,9 @@ const port = process.env.PORT;
 
 app.use('/',express.static(__dirname))
 
-app.use('/login',loginroute);
-
+// app.use('/login',loginroute);
+app.use('/user',userroute)
+app.use('/vendor',vendorroute)
 
 
 app.get('/',(req,res)=>{
@@ -34,10 +36,10 @@ app.get('/',(req,res)=>{
     res.send('Helloooooooooooo')
 })
 
-app.listen(port,()=>{
-    console.log(`Server running at http://${hostname}:${port}/`);
-})
-
-// app.listen(4000, () => {
-//     console.log("http://localhost:4000");
+// app.listen(port,()=>{
+//     console.log(`Server running at http://${hostname}:${port}/`);
 // })
+
+app.listen(4000, () => {
+    console.log("http://localhost:4000");
+})
