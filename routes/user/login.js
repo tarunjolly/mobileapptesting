@@ -12,7 +12,7 @@ route.post('/checkUser',(req,res)=>{
         if(user!=null){
             res.sendStatus(200);
         }else{
-            res.sendStatus(404).send(err.message);
+            res.status(404).send(err.message);
         }
     })
 })
