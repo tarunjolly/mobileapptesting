@@ -14,6 +14,8 @@ route.post('/checkUser',(req,res)=>{
         }else{
             res.sendStatus(404);
         }
+    }).catch((err)=>{
+        res.status(500).send(err.message)
     })
 })
 
@@ -27,6 +29,8 @@ route.post('/verify',(req,res)=>{
         }else{
             res.sendStatus(404);
         }
+    }).catch((err)=>{
+        res.status(500).send(err.message)
     })
 })
 
@@ -53,7 +57,7 @@ console.log(req.body);
         .catch((err)=>{
             // console.log(err)
             // res.redirect('/signup')
-            console.log(err.message);
+            // console.log(err.message);
             res.status(500).send(err.message);
         })
 })
