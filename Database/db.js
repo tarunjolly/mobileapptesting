@@ -82,9 +82,9 @@ const vendors=db.define('vendors',{
     phoneNumber:{
         type:sequelize.STRING,
         unique:true,
-        validate:{
-            isNumeric:true
-        }
+        // validate:{
+        //     isNumeric:true
+        // }
     },
     localityOfStall:{
         type:sequelize.STRING,
