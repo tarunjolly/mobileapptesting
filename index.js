@@ -34,14 +34,14 @@ app.use('/vendor',vendorroute)
 
 app.get('/',(req,res)=>{
     console.log(' koi toh aaya ')
-    // res.send('Helloooooooooooo')
-    res.sendFile(__dirname+'/public/test.html')
+    res.send('Helloooooooooooo')
+    // res.sendFile(__dirname+'/public/test.html')
 })
 
-// app.listen(port,()=>{
-//     console.log(`Server running at http://${hostname}:${port}/`);
+app.listen(port,()=>{
+    console.log(`Server running at http://${hostname}:${port}/`);
+})
+
+// app.listen(4000 || {port}, () => {
+//     console.log("http://localhost:4000");
 // })
-
-app.listen(4000 || {port}, () => {
-    console.log("http://localhost:4000");
-})
