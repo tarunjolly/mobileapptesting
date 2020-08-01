@@ -5,7 +5,8 @@ const session=require('express-session')
 const bodyParser=require('body-parser')
 const passport=require('./PassportSetup/setuppassport');
 const vendorroute=require('./routes/vendor/vendorroute');
-const userroute=require('./routes/user/userroute')
+const userroute=require('./routes/user/userroute');
+const path = require('path');
 app.use(bodyParser.json());
 app.use(express.json())
 app.use(express.urlencoded(({ extended: true })))
@@ -33,13 +34,14 @@ app.use('/vendor',vendorroute)
 
 app.get('/',(req,res)=>{
     console.log(' koi toh aaya ')
-    res.send('Helloooooooooooo')
+    // res.send('Helloooooooooooo')
+    res.sendFile(__dirname+'/public/test.html')
 })
 
-app.listen(port,()=>{
-    console.log(`Server running at http://${hostname}:${port}/`);
-})
-
-// app.listen(4000 || {port}, () => {
-//     console.log("http://localhost:4000");
+// app.listen(port,()=>{
+//     console.log(`Server running at http://${hostname}:${port}/`);
 // })
+
+app.listen(4000 || {port}, () => {
+    console.log("http://localhost:4000");
+})

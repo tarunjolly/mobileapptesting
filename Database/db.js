@@ -31,9 +31,9 @@ const users=db.define('users',{
     phoneNumber:{
         type:sequelize.STRING,
         unique:true,
-        validate:{
-            isNumeric:true
-        }
+        // validate:{
+        //     isNumeric:true
+        // }
     },
     address:{
         type:sequelize.STRING,
