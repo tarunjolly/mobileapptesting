@@ -1,9 +1,10 @@
 const sequelize=require('sequelize');
 
-const db = new sequelize('testing_subzi', 'root', '1234', {
-    host: 'localhost',
+const db = new sequelize('st1', 'root', 'mysql', {
+    host: '34.87.38.101',
     dialect:'mysql'
   });
+
 // const db= new sequelize({
 //     dialect : 'sqlite',
 //     storage: 'users_test.db'
