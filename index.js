@@ -41,6 +41,6 @@ app.get('/',(req,res)=>{
 //     console.log(`Server running at http://${hostname}:${port}/`);
 // })
 
-app.listen(4000 || {port}, () => {
-    console.log("http://localhost:4000");
-})
+ app.listen(80 || {port}, () => {
+     console.log("http://localhost:80");
+ })
