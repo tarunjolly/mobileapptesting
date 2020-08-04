@@ -27,7 +27,6 @@ const port = process.env.PORT;
 
 app.use('/',express.static(__dirname))
 
-// app.use('/login',loginroute);
 app.use('/user',userroute)
 app.use('/vendor',vendorroute)
 
@@ -38,10 +37,10 @@ app.get('/',(req,res)=>{
     // res.sendFile(__dirname+'/public/test.html')
 })
 
-app.listen(port,()=>{
-    console.log(`Server running at http://${hostname}:${port}/`);
-})
-
-// app.listen(4000 || {port}, () => {
-//     console.log("http://localhost:4000");
+// app.listen(port,()=>{
+//     console.log(`Server running at http://${hostname}:${port}/`);
 // })
+
+app.listen(4000 || {port}, () => {
+    console.log("http://localhost:4000");
+})

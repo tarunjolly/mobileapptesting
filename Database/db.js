@@ -1,13 +1,13 @@
 const sequelize=require('sequelize');
 
-// const db = new sequelize('testing', 'root', '1234', {
-//     host: 'localhost',
-//     dialect:'mysql'
-//   });
-const db= new sequelize({
-    dialect : 'sqlite',
-    storage: 'users_test.db'
-})  
+const db = new sequelize('testing_subzi', 'root', '1234', {
+    host: 'localhost',
+    dialect:'mysql'
+  });
+// const db= new sequelize({
+//     dialect : 'sqlite',
+//     storage: 'users_test.db'
+// })  
 
 //user table 
 const users=db.define('users',{
@@ -142,6 +142,7 @@ const products=db.define('products',{
 
 })
 
+
 //user's cart table
 const userCart=db.define('userCart',{
     userCartId:{
@@ -200,6 +201,12 @@ const orders=db.define('orders',{
         type:sequelize.STRING,
         
     },
+    price:{
+        type:sequelize.STRING
+    },
+    quantity:{
+        type:sequelize.STRING
+    },
     status:{
         type:sequelize.STRING
     },
@@ -216,10 +223,29 @@ orders.belongsTo(users)
 vendors.hasMany(orders)
 orders.belongsTo(vendors)
 
+const markers=db.define('markers',{
+    id:{
+        type:sequelize.INTEGER,
+        autoIncrement:true,
+        primaryKey:true,
+        
+    },
+    lat:{
+        type:sequelize.FLOAT
+    },
+    lng:{
+        type:sequelize.FLOAT
+    }
+
+})
+
+vendors.hasOne(markers)
+markers.belongsTo(vendors)
+
 db.sync().then(()=>{
     console.log('Database sucessfully  created');
 })
 
 module.exports={
-    db,users,products,vendors,userCart,vendorCart,orders
+    db,users,products,vendors,userCart,vendorCart,orders,markers
 }
