@@ -20,9 +20,9 @@ userCart.findOne({where:{productProductId:req.body.productId,userUserId:req.body
                 productProductId: req.body.productId,
             })
             .then((usercartproduct) => {
-                //    Boolean resp=true
+               
                 res.sendStatus(200);
-                console.log(usercartproduct);
+                
             }).catch((err) => {
                 res.status(500).send(err.message);
             })}
@@ -36,9 +36,9 @@ else{
         productProductId: req.body.productId,
     })
     .then((usercartproduct) => {
-        //    Boolean resp=true
+       
         res.sendStatus(200);
-        console.log(usercartproduct);
+       
     }).catch((err) => {
         res.status(500).send(err.message);
     })}
@@ -47,9 +47,9 @@ else{
 
 
 route.get('/getallproducts',(req,res)=>{
-    userCart.findAll({where:{userUserId:req.body.userId},include:[products]}).then(items=>{
-        items=items.map(item=>(item.toJSON()));
-        res.status(200).send(items)
+    userCart.findAll({where:{userUserId:req.query.userId},include:[products]}).then(viewCart=>{
+        viewCart=viewCart.map(item=>(item.toJSON()));
+        res.status(200).send({viewCart})
     }).catch(err=>{
         res.status(500).send(err.message)
     });

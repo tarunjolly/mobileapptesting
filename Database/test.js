@@ -37,9 +37,9 @@ const {db,users,products,vendors,userCart,vendorCart,orders}=require('./db') ;
 
 // products.create(
 //     {   
-//         name:"tamator",
+//         name:"aolu",
 //         unit:"kg",
-//         image:"dsa",
+//         image:"dsaw",
 //         description:"adsfsddVIJAY",
 //          })
 //     .then((user)=>{

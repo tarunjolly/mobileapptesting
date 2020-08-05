@@ -42,7 +42,7 @@ userCart.findAll({where:{userUserId:req.body.userId}}).then(cartitems=>{
 
 route.get('/getallorders',(req,res)=>{
     orders.findAll({where:{userUserId:req.body.userId},order: [
-        ['customOrderId', 'ASC'],
+        ['customOrderId', 'DESC'],
     ],
 include:[products,vendors]}).then(items=>{
         items=items.map(item=>(item.toJSON()));

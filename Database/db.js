@@ -1,9 +1,15 @@
 const sequelize=require('sequelize');
 
+// const db = new sequelize('st1', 'root', '1234', {
+//     host: 'localhost',
+//     dialect:'mysql'
+//   });
+
 const db = new sequelize('st1', 'root', 'mysql', {
     host: '34.87.38.101',
     dialect:'mysql'
   });
+
 
 // const db= new sequelize({
 //     dialect : 'sqlite',
@@ -232,10 +238,10 @@ const markers=db.define('markers',{
         
     },
     lat:{
-        type:sequelize.FLOAT
+        type:sequelize.DOUBLE
     },
     lng:{
-        type:sequelize.FLOAT
+        type:sequelize.DOUBLE
     }
 
 })

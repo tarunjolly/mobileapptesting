@@ -20,9 +20,7 @@ vendorCart.findOne({where:{productProductId:req.body.productId,vendorVendorId:re
                 productProductId: req.body.productId,
             })
             .then((vendorsproduct) => {
-                //    Boolean resp=true
                 res.sendStatus(200);
-                console.log(vendorsproduct);
             }).catch((err) => {
                 res.status(500).send(err.message);
             })
@@ -37,9 +35,7 @@ vendorCart.findOne({where:{productProductId:req.body.productId,vendorVendorId:re
                 productProductId: req.body.productId,
             })
             .then((vendorsproduct) => {
-                //    Boolean resp=true
                 res.sendStatus(200);
-                console.log(vendorsproduct);
             }).catch((err) => {
                 res.status(500).send(err.message);
             })

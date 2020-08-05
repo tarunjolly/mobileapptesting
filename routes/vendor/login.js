@@ -38,9 +38,7 @@ route.post('/checkVendor',(req,res)=>{
 
 
 route.post('/verify',(req,res)=>{
-    console.log(req.body);
     vendors.findOne({where:{phoneNumber:req.body.phoneNumber}}).then(vendor=>{
-        console.log(vendor);
         if(vendor!=null){
             res.status(200).send(vendor);
         }else{
@@ -68,7 +66,6 @@ route.post('/register',vendorUpload,(req,res)=>{
             status:"default",
         })
         .then((vendor)=>{
-        //    Boolean resp=true
         res.status(200).send(vendor);
     })
         .catch((err)=>{

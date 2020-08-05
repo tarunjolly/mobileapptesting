@@ -5,12 +5,12 @@ const { passport } = require('../../PassportSetup/setuppassport');
 const sequelize = require('sequelize');
 
 route.get('/',(req,res)=>{
-users.findOne({where:{userId:req.body.userId}}).then((user)=>{
-    let vendors=[]
-    vendors.findAll({where:sequelize.or({vendorId:user.subscribed1},{vendorId:user.subscribed2})}).then((vendor)=>{
-       // vendors.push(vendor)
-       console.log(vendor)
-       res.send(vendor)
+   
+users.findOne({where:{userId:req.query.userId}}).then((user)=>{
+    
+    vendors.findAll({where:sequelize.or({vendorId:user.subscribed1},{vendorId:user.subscribed2})}).then((listofSubscribed)=>{
+     
+       res.send({listofSubscribed})
     })
     
 })

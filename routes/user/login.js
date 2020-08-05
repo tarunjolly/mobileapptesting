@@ -7,7 +7,6 @@ const sequelize=require('sequelize');
 
 
 route.post('/checkUser',(req,res)=>{
-    console.log(req.body);
     users.findOne({where:{phoneNumber:req.body.phoneNumber}}).then(user=>{
         if(user!=null){
             res.sendStatus(200);
@@ -21,9 +20,7 @@ route.post('/checkUser',(req,res)=>{
 
 
 route.post('/verify',(req,res)=>{
-    console.log(req.body);
     users.findOne({where:{phoneNumber:req.body.phoneNumber}}).then(user=>{
-        console.log(user);
         if(user!=null){
             res.status(200).send(user);
         }else{
@@ -37,7 +34,6 @@ route.post('/verify',(req,res)=>{
 
 //Register
 route.post('/register',(req,res)=>{
-console.log(req.body);
 
     users.create(
         {   
@@ -51,13 +47,9 @@ console.log(req.body);
             role:"user",
         })
         .then((user)=>{
-        //    Boolean resp=true
         res.status(200).send(user);
     })
         .catch((err)=>{
-            // console.log(err)
-            // res.redirect('/signup')
-            // console.log(err.message);
             res.status(500).send(err.message);
         })
 })
