@@ -34,13 +34,12 @@ app.use('/vendor',vendorroute)
 app.get('/',(req,res)=>{
     console.log(' koi toh aaya ')
     res.send('Helloooooooooooo')
-    // res.sendFile(__dirname+'/public/test.html')
 })
 
-// app.listen(port,()=>{
-//     console.log(`Server running at http://${hostname}:${port}/`);
-// })
+app.listen(port,()=>{
+    console.log(`Server running at http://${hostname}:${port}/`);
+})
 
- app.listen(80 || {port}, () => {
-     console.log("http://localhost:80");
- })
+//  app.listen(80 || {port}, () => {
+//      console.log("http://localhost:80");
+//  })
