@@ -5,7 +5,7 @@ const sequelize=require('sequelize');
 //     dialect:'mysql'
 //   });
 
-const db = new sequelize('st1', 'root', 'mysql', {
+const db = new sequelize('st1', 'root', '1234', {
     host: '34.87.38.101',
     dialect:'mysql'
   });
