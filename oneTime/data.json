@@ -1,0 +1,275 @@
+[
+    {
+        "productId" : "1",
+        "Name" : "Potato",
+        "unit" : "kg",
+        "image" : "1.jpg",
+        "description" : "The potato is a root vegetable native to the Americas, a starchy tuber of the plant Solanum tuberosum, and the plant itself is a perennial in the nightshade family, Solanaceae."
+    },
+    {
+        "productId" : "2",
+        "Name" : "Tomato",
+        "unit" : "kg",
+        "image" : "2.jpg",
+        "description" : "The tomato is the edible, often red, berry of the plant Solanum lycopersicum, commonly known as a tomato plant."
+    },
+    {
+        "productId" : "3",
+        "Name" : "Carrot",
+        "unit" : "kg",
+        "image" : "3.jpg",
+        "description" : "The carrot is a biennial plant in the umbellifer family Apiaceae. At first, it grows a rosette of leaves while building up the enlarged taproot."
+    },
+    {
+        "productId" : "4",
+        "Name" : "Broccoli",
+        "unit" : "kg",
+        "image" : "4.jpg",
+        "description" : "Broccoli is an edible green plant in the cabbage family (family Brassicaceae, genus Brassica) whose large flowering head and stalk is eaten as a vegetable. "
+    },
+    {
+        "productId" : "5",
+        "Name" : "Asparagus",
+        "unit" : "kg",
+        "image" : "5.jpg",
+        "description" : "Asparagus is low in food energy and very low in sodium. It is a good source of vitamin B6, calcium, magnesium, and zinc, and a very good source of dietary fibre."
+    },
+    {
+        "productId" : "6",
+        "Name" : "Cauliflower",
+        "unit" : "kg",
+        "image" : "6.jpg",
+        "description" : "Cauliflower is one of several vegetables in the species Brassica oleracea in the genus Brassica, which is in the Brassicaceae (or Mustard) family."
+    },
+    {
+        "productId" : "7",
+        "Name" : "Corn",
+        "unit" : "kg",
+        "image" : "7.jpg",
+        "description" : "Maize and cornmeal (ground dried maize) constitute a staple food in many regions of the world. Maize is used to produce cornstarch."
+    },
+    {
+        "productId" : "8",
+        "Name" : "Cucumber",
+        "unit" : "kg",
+        "image" : "8.jpg",
+        "description" : "The cucumber is a creeping vine that roots in the ground and grows up trellises or other supporting frames, wrapping around supports with thin, spiraling tendrils."
+    },
+    {
+        "productId" : "9",
+        "Name" : "Eggplant",
+        "unit" : "kg",
+        "image" : "9.jpg",
+        "description" : "The eggplant is a delicate, tropical perennial plant often cultivated as a tender or half-hardy annual in temperate climates. The stem is often spiny. "
+    },
+    {
+        "productId" : "10",
+        "Name" : "Green Pepper",
+        "unit" : "kg",
+        "image" : "10.jpg",
+        "description" : "Green peppers are basically green-coloured bell peppers or sweet peppers or capsicum (Capsicum Annum). This medium-sized fruit pods have a wonderful bell shape."
+    },
+    {
+        "productId" : "11",
+        "Name" : "Lettuce",
+        "unit" : "kg",
+        "image" : "11.jpg",
+        "description" : "Lettuce (Lactuca sativa) is a popular leafy vegetable in the daisy family. It ranges in color from yellow to dark green but may also have reddish hues. "
+    },
+    {
+        "productId" : "12",
+        "Name" : "Mushrooms",
+        "unit" : "kg",
+        "image" : "12.jpg",
+        "description" : "Mushrooms are edible fungus that can provide several important nutrients. The many kinds of mushroom have varying compositions and nutritional profiles."
+    },
+    {
+        "productId" : "13",
+        "Name" : "Onion",
+        "unit" : "kg",
+        "image" : "13.jpg",
+        "description" : "Onions belong to the Allium family of plants, which also includes chives, garlic, and leeks. These vegetables have characteristic pungent flavors and some medicinal properties."
+    },
+    {
+        "productId" : "14",
+        "Name" : "Pumpkin",
+        "unit" : "kg",
+        "image" : "14.jpg",
+        "description" : "Pumpkin is a variety of squash that people often think of as a traditional Halloween decoration or a Thanksgiving pie filling. "
+    },
+    {
+        "productId" : "15",
+        "Name" : "Red Pepper",
+        "unit" : "kg",
+        "image" : "15.jpg",
+        "description" : "Red peppers are basically green-coloured bell peppers or sweet peppers or capsicum (Capsicum Annum). "
+    },
+    {
+        "productId" : "16",
+        "Name" : "Beetroot",
+        "unit" : "kg",
+        "image" : "16.jpg",
+        "description" : "Beetroot has been gaining in popularity as a superfood. Recent studies claim that beets and beetroot juice can improve athletic performance, reduce blood pressure, and increase blood flow."
+    },
+    {
+        "productId" : "17",
+        "Name" : "Brussel Sprouts",
+        "unit" : "kg",
+        "image" : "17.jpg",
+        "description" : "Brussels sprouts are high in fiber, vitamins, minerals and antioxidants, making them a nutritious addition to your diet."
+    },
+    {
+        "productId" : "18",
+        "Name" : "Peas",
+        "unit" : "kg",
+        "image" : "18.jpg",
+        "description" : "The pea is most commonly the small spherical seed or the seed-pod of the pod fruit Pisum sativum. "
+    },
+    {
+        "productId" : "19",
+        "Name" : "Zucchini",
+        "unit" : "kg",
+        "image" : "19.jpg",
+        "description" : "The zucchini or courgette  (Cucurbita pepo) is a summer squash, of Mesoamerican origin. "
+    },
+    {
+        "productId" : "20",
+        "Name" : "Radish",
+        "unit" : "kg",
+        "image" : "20.jpg",
+        "description" : "Red radishes are packed with Vitamins E, A, C, B6, and K. Plus it's high on antioxidants, fiber, zinc, potassium."
+    },
+    {
+        "productId" : "21",
+        "Name" : "Sweet Potato",
+        "unit" : "kg",
+        "image" : "21.jpg",
+        "description" : "The sweet potato or sweetpotato is a dicotyledonous plant that belongs to the bindweed or morning glory family, Convolvulaceae. "
+    },
+    {
+        "productId" : "22",
+        "Name" : "Artichoke",
+        "unit" : "kg",
+        "image" : "22.jpg",
+        "description" : "Artichokes are rich in minerals such as potassium, magnesium and phosphorus, which are known to enhance our heart health."
+    },
+    {
+        "productId" : "23",
+        "Name" : "Leek",
+        "unit" : "kg",
+        "image" : "23.jpg",
+        "description" : "Leeks have a mild, onion-like taste. In its raw state, the vegetable is crunchy and firm."
+    },
+    {
+        "productId" : "24",
+        "Name" : "Cabbage",
+        "unit" : "kg",
+        "image" : "24.jpg",
+        "description" : "Cabbage, which is often lumped into the same category as lettuce because of their similar appearance."
+    },
+    {
+        "productId" : "25",
+        "Name" : "Celery",
+        "unit" : "kg",
+        "image" : "25.jpg",
+        "description" : "Celery is part of the Apiaceae family, which includes carrots, parsnips, parsley, and celeriac."
+    },
+    {
+        "productId" : "26",
+        "Name" : "Chili",
+        "unit" : "kg",
+        "image" : "26.jpg",
+        "description" : "a small hot-tasting pod of a variety of capsicum, used in sauces, relishes, and spice powders."
+    },
+    {
+        "productId" : "27",
+        "Name" : "Garlic",
+        "unit" : "kg",
+        "image" : "27.jpg",
+        "description" : "Garlic (Allium sativum), is used widely as a flavoring in cooking."
+    },
+    {
+        "productId" : "28",
+        "Name" : "Basil",
+        "unit" : "kg",
+        "image" : "28.jpg",
+        "description" : "Basil is an herb in the mint family. It adds flavor to meals, and its nutrients may provide health benefits."
+    },
+    {
+        "productId" : "29",
+        "Name" : "Coriander",
+        "unit" : "kg",
+        "image" : "29.jpg",
+        "description" : "Coriander is a spice produced from the round, tan-colored seeds of the coriander plant (Coriandrum sativum)."
+    },
+    {
+        "productId" : "30",
+        "Name" : "Parsley",
+        "unit" : "kg",
+        "image" : "30.jpg",
+        "description" : "Parsley, also known as Petroselinum crispum, is a member of the Apiaceae family."
+    },
+    {
+        "productId" : "31",
+        "Name" : "Dill",
+        "unit" : "kg",
+        "image" : "31.jpg",
+        "description" : "The dill plant (Anethum graveolens) provides feathery green leaves for the dill weed herb."
+    },
+    {
+        "productId" : "32",
+        "Name" : "Rosemary",
+        "unit" : "kg",
+        "image" : "32.jpg",
+        "description" : "Rosemary is a fragrant evergreen herb native to the Mediterranean."
+    },
+    {
+        "productId" : "33",
+        "Name" : "Oregano",
+        "unit" : "kg",
+        "image" : "33.jpg",
+        "description" : "Oregano is a herb from the mint, or Lamiaceae family. People have used it ."
+    },
+    {
+        "productId" : "34",
+        "Name" : "Green Beans",
+        "unit" : "kg",
+        "image" : "34.jpg",
+        "description" : "Green beans, string beans, or snap beans are a rich source of vitamins A, C, and K, and of folic acid and fiber."
+    },
+    {
+        "productId" : "35",
+        "Name" : "Curry leaves",
+        "unit" : "kg",
+        "image" : "40.jpg",
+        "description" : "Used for flavouring in all Indian cookery. "
+    },
+    {
+        "productId" : "36",
+        "Name" : "Spinach",
+        "unit" : "kg",
+        "image" : "36.jpg",
+        "description" : "Spinach is a superfood. It is loaded with tons of nutrients in a low-calorie package."
+    },
+    {
+        "productId" : "37",
+        "Name" : "Indian Marrow",
+        "unit" : "kg",
+        "image" : "37.jpg",
+        "description" : "This is a light green marrow that can grow up to a metre." 
+    },
+    {
+        "productId" : "38",
+        "Name" : "Ribbed gourd",
+        "unit" : "kg",
+        "image" : "38.jpg",
+        "description" : "Peel and cut into chunks to use in a curry. Seeds may or may not be removed."
+    },
+    {
+        "productId" : "39",
+        "Name" : "Bitter melon",
+        "unit" : "kg",
+        "image" : "39.jpg",
+        "description" : "Bitter melon is a tropical plant and the fruit has an extremely bitter taste."
+    }
+]
