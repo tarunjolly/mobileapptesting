@@ -58,7 +58,7 @@ route.get('/getallproducts',(req,res)=>{
 
 
 route.get('/deletecartproduct',(req,res)=>{
-    userCart.destroy({where:{userUserId:req.body.userId,productProductId:req.body.productId}}).then(()=>{
+    userCart.destroy({where:{userUserId:req.query.userId,productProductId:req.query.productId}}).then(()=>{
     
         res.sendStatus(200);
     }).catch(err=>{
@@ -69,7 +69,7 @@ route.get('/deletecartproduct',(req,res)=>{
 
 
 route.get('/deletecart',(req,res)=>{
-    userCart.destroy({where:{userUserId:req.body.userId}}).then(()=>{
+    userCart.destroy({where:{userUserId:req.query.userId}}).then(()=>{
         res.sendStatus(200)
     }).catch(err=>{
         res.status(500).send(err.message)
