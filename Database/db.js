@@ -113,7 +113,7 @@ const vendors=db.define('vendors',{
         type:sequelize.STRING,
     },
     aadharBackImage:{
-        type:sequelize.INTEGER,
+        type:sequelize.STRING,
     },
     status:{
         type:sequelize.STRING,
